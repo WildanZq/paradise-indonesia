@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Indonesia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<nav id="nav">
+		<div id="nav-button"></div>
+	</nav>
+
+	<div id="indicator">
+		<div class="item active"><span class="tag">HOME</span></div>
+		<div class="item"><span class="tag">TEXT</span></div>
+		<div class="item"><span class="tag">TEXT</span></div>
+		<div class="item"><span class="tag">TEXT</span></div>
+		<div class="item"><span class="tag">TEXT</span></div>
+		<div class="item"><span class="tag">TEXT</span></div>
+	</div>
+
+	<div class="home">
+		<div class="desc">
+			<div>
+				<h1>INDONESIA</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button class="btn">More Information</button>
+			</div>
+		</div>
+		<div class="img">
+			<div class="secondary"></div>
+			<div class="primary">
+				<div>
+					<h5>Lorem Ipsum</h5>
+					<span>Location</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$('#indicator .item').click(function() {
+			$('#indicator .item').removeClass('active');
+			$(this).addClass('active');
+		});
+	</script>
+</body>
+</html>
