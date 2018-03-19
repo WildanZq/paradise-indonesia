@@ -201,6 +201,7 @@
 		padding: 0;
 		display: block;
 		width: 100%;
+		max-width: unset;
 	}
 	.home .desc .item p {
 		margin-bottom: 12px;
