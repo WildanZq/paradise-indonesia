@@ -63,6 +63,9 @@
 	transform: translateX(0);
 }
 
+.home div {
+	transition: .5s;
+}
 .home {
 	width: 100%;
 	height: 100vh;
@@ -73,19 +76,34 @@
 	width: 50%;
 }
 .home .desc {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.home .desc > div {
+.home .desc .item.active {
+	opacity: 1;
+	transform: translateX(0);
+}
+.home .desc .item {
+	opacity: 0;
+	transform: translateX(-20px);
+	position: absolute;
+	width: 50%;
 	padding-left: 100px;
 	padding-right: 180px;
+	overflow: visible;
+	z-index: 0;
 }
-.home .desc > div h1 {
-	margin-top: 0;
-	margin-bottom: 24px;
+.home .desc .item h1 {
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	margin: 0;
+	padding: 24px 30px;
+	padding-left: 0;
 }
-.home .desc > div p {
+.home .desc .item p {
 	margin-bottom: 20px;
 }
 .home .img {
@@ -108,13 +126,19 @@
   	color: white;
   	text-align: right;
 }
-.home .img .primary > div {
+.home .img .primary .item.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+.home .img .primary .item {
+	opacity: 0;
+	transform: translateY(-10px);
 	position: absolute;
 	bottom: 30px;
 	right: 30px;
 }
-.home .img .primary > div h5 {
-	margin-bottom: 0;
+.home .img .primary .item h5 {
+	margin: 0;
 }
 .home .img .secondary {
 	background-color: #7d7d7d;
@@ -123,8 +147,34 @@
   	transform: translateY(-60%);
 }
 
+.home.scrolled .desc {
+	width: 34%;
+}
+.home.scrolled .desc .item {
+	padding-right: 20px;
+	z-index: 9;
+}
+.home.scrolled .desc .item h1 {
+	background-color: white;
+	max-width: 400px;
+	width: 500%;
+}
+.home.scrolled .img {
+	width: 66%;
+}
+.home.scrolled .img .primary {
+	box-shadow: none;
+	max-width: 100%;
+	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transform: translateY(0);
+}
+
 @media (max-width: 1024px) {
-	.home .desc > div {
+	.home .desc .item {
 		padding-right: 100px;
 	}
 	.home .img .primary {
@@ -135,13 +185,25 @@
 	.home {
 		flex-direction: column-reverse;
 	}
-	.home .desc, .home .img {
+	.home .desc, .home .img, .home.scrolled .desc, .home.scrolled .img {
 		width: 100%;
 		height: 50%;
 	}
-	.home .desc > div {
+	.home .desc .item {
+		width: 70%;
 		padding-left: 15%;
 		padding-right: 20%;
+		text-align: right;
+		transform: translateX(20px);
+	}
+	.home .desc .item h1, .home.scrolled .desc .item h1 {
+		margin-bottom: 14px;
+		padding: 0;
+		display: block;
+		width: 100%;
+	}
+	.home .desc .item p {
+		margin-bottom: 12px;
 	}
 	.home .img .primary, .home .img .secondary {
 		width: 75%;
@@ -150,9 +212,11 @@
 	.home .img .primary {
 		left: 15%; right: 20%;
 	}
-	.home .img .primary > div {
+	.home .img .primary .item {
+		transform: translateY(10px);
 		right: 20px;
-		bottom: 20px;
+		top: 20px;
+		bottom: auto;
 	}
 	.home .img .secondary {
 		left: 20%; right: 15%;

@@ -21,6 +21,7 @@ span {
 .btn {
 	cursor: pointer;
   	color: white;
+  	text-decoration: none;
   	border: none;
 	background-color: #959595;
   	box-shadow: 0px 18px 18px 0 rgba(93, 93, 93, 0.16);

@@ -20,13 +20,32 @@
 		<div class="item"><span class="tag">TEXT</span></div>
 		<div class="item"><span class="tag">TEXT</span></div>
 		<div class="item"><span class="tag">TEXT</span></div>
-		<div class="item"><span class="tag">TEXT</span></div>
 	</div>
 
 	<div class="home">
 		<div class="desc">
-			<div>
+			<div class="item active">
 				<h1>INDONESIA</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button class="btn">More Information</button>
+			</div>
+			<div class="item">
+				<h1>TITLE FOR THE CONTENT 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button class="btn">More Information</button>
+			</div>
+			<div class="item">
+				<h1>TITLE FOR THE CONTENT 3</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button class="btn">More Information</button>
+			</div>
+			<div class="item">
+				<h1>TITLE FOR THE CONTENT 4</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<button class="btn">More Information</button>
+			</div>
+			<div class="item">
+				<h1>TITLE FOR THE CONTENT 5</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<button class="btn">More Information</button>
 			</div>
@@ -34,8 +53,24 @@
 		<div class="img">
 			<div class="secondary"></div>
 			<div class="primary">
-				<div>
-					<h5>Lorem Ipsum</h5>
+				<div class="item active">
+					<h5>Lorem Ipsum 1</h5>
+					<span>Location</span>
+				</div>
+				<div class="item">
+					<h5>Lorem Ipsum 2</h5>
+					<span>Location</span>
+				</div>
+				<div class="item">
+					<h5>Lorem Ipsum 3</h5>
+					<span>Location</span>
+				</div>
+				<div class="item">
+					<h5>Lorem Ipsum 4</h5>
+					<span>Location</span>
+				</div>
+				<div class="item">
+					<h5>Lorem Ipsum 5</h5>
 					<span>Location</span>
 				</div>
 			</div>
@@ -44,8 +79,31 @@
 
 	<script>
 		$('#indicator .item').click(function() {
+			index = $(this).index();
+			$.each($('#indicator .item'), (key,data) => {
+				if ($('#indicator .item').eq(key).hasClass('active')) {
+					prevIndex = key;
+				}
+			});
+
 			$('#indicator .item').removeClass('active');
 			$(this).addClass('active');
+
+			setTimeout(() => {
+				if (index == 0) {
+					$('.home').removeClass('scrolled');
+				} else {
+					$('.home').addClass('scrolled');
+				}
+			}, 500);
+
+			$('.home .desc .item').removeClass('active');
+			$('.home .img .item').removeClass('active');
+			if (index == 0 || prevIndex == 0) { time = 1000 } else { time = 500 }
+			setTimeout(() => {
+				$('.home .desc .item').eq(index).addClass('active');
+				$('.home .img .item').eq(index).addClass('active');
+			}, time);
 		});
 	</script>
 </body>
