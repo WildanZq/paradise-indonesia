@@ -116,7 +116,7 @@
 }
 .home .img {
 	position: relative;
-	background-image: linear-gradient(30deg, #09a9ec, #a06cad);
+	/*background-image: linear-gradient(30deg, #09a9ec, #a06cad);*/
 }
 .home .img .primary, .home .img .secondary {
 	max-width: 611px;
@@ -230,10 +230,6 @@
 	}
 }
 @media (max-width: 768px) {
-	#nav-button, #nav-button:after, #nav-button:before {
-		border-color: white;
-	}
-
 	.home {
 		flex-direction: column-reverse;
 	}
@@ -261,9 +257,11 @@
 	.home .img .primary, .home .img .secondary {
 		width: 75%;
 		height: 80%;
+		top: 60%;
 	}
 	.home .img .primary {
 		left: 15%; right: 20%;
+		top: 60%;
 	}
 	.home .img .primary .item {
 		transform: translateY(10px);
