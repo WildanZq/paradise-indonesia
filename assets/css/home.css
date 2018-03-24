@@ -63,6 +63,13 @@
 	transform: translateX(0);
 }
 
+@media (max-width: 768px) {
+	#indicator {
+		transform: translateY(-50%);
+		top: 75%;
+	}
+}
+
 .home div {
 	transition: .5s;
 }
@@ -84,6 +91,7 @@
 .home .desc .item.active {
 	opacity: 1;
 	transform: translateX(0);
+	z-index: 0;
 }
 .home .desc .item {
 	opacity: 0;
@@ -93,7 +101,7 @@
 	padding-left: 100px;
 	padding-right: 180px;
 	overflow: visible;
-	z-index: 0;
+	z-index: -1;
 }
 .home .desc .item h1 {
 	width: 100%;
@@ -108,7 +116,7 @@
 }
 .home .img {
 	position: relative;
-	background-color: #e1e1e1;
+	background-image: linear-gradient(30deg, #09a9ec, #a06cad);
 }
 .home .img .primary, .home .img .secondary {
 	max-width: 611px;
@@ -116,6 +124,7 @@
 	width: 88%;
   	height: 60%;
   	position: absolute;
+  	overflow: hidden;
 }
 .home .img .primary {
 	background-color: #464646;
@@ -125,10 +134,34 @@
   	transform: translateY(-45%);
   	color: white;
   	text-align: right;
+  	overflow: hidden;
+  	position: relative;
+}
+.home .img .primary .bg.active {
+	display: block;
+}
+.home .img .primary .bg {
+	animation: slide-in .7s ease-out;
+	display: none;
+	position: absolute;
+	right: 0; top: 0;
+	width: 100%;
+	height: 100%;
+	transition: .5s;
+	overflow: hidden;
+}
+.home .img .primary .bg > div {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0; top: 0;
 }
 .home .img .primary .item.active {
 	opacity: 1;
 	transform: translateY(0);
+	z-index: 2;
 }
 .home .img .primary .item {
 	opacity: 0;
@@ -136,6 +169,14 @@
 	position: absolute;
 	bottom: 30px;
 	right: 30px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+}
+.home .img .primary .item img {
+	width: 19px;
+	height: 18px;
+	margin-left: 10px;
 }
 .home .img .primary .item h5 {
 	margin: 0;
@@ -150,9 +191,12 @@
 .home.scrolled .desc {
 	width: 34%;
 }
+.home.scrolled .desc .item.active {
+	z-index: 9;
+}
 .home.scrolled .desc .item {
 	padding-right: 20px;
-	z-index: 9;
+	z-index: 8;
 }
 .home.scrolled .desc .item h1 {
 	background-color: white;
@@ -179,6 +223,10 @@
 	}
 	.home .img .primary {
 		left: -8%;
+	}
+	.home .img .primary .item img {
+		width: 16px;
+		height: 15px;
 	}
 }
 @media (max-width: 768px) {
@@ -218,6 +266,11 @@
 		right: 20px;
 		top: 20px;
 		bottom: auto;
+	}
+	.home .img .primary .item img {
+		width: 13px;
+		height: 12px;
+		margin-left: 6px;
 	}
 	.home .img .secondary {
 		left: 20%; right: 15%;

@@ -30,48 +30,69 @@
 				<button class="btn">More Information</button>
 			</div>
 			<div class="item">
-				<h1>TITLE FOR THE CONTENT 2</h1>
+				<h1>TITLE FOR CONTENT 2</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<button class="btn">More Information</button>
 			</div>
 			<div class="item">
-				<h1>TITLE FOR THE CONTENT 3</h1>
+				<h1>TITLE FOR CONTENT 3</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<button class="btn">More Information</button>
 			</div>
 			<div class="item">
-				<h1>TITLE FOR THE CONTENT 4</h1>
+				<h1>TITLE FOR CONTENT 4</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<button class="btn">More Information</button>
 			</div>
 			<div class="item">
-				<h1>TITLE FOR THE CONTENT 5</h1>
+				<h1>TITLE FOR CONTENT 5</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<button class="btn">More Information</button>
 			</div>
 		</div>
 		<div class="img">
-			<div class="secondary"></div>
+			<div class="secondary" style="background-image: url(assets/img/pantai2.jpg);"></div>
 			<div class="primary">
+				<div class="bg active"><div style="background-image: url(assets/img/pantai1.jpg);"></div></div>
+				<div class="bg"><div style="background-image: url(assets/img/pantai2.jpg);"></div></div>
+				<div class="bg"><div style="background-image: url(assets/img/pantai1.jpg);"></div></div>
+				<div class="bg"><div style="background-image: url(assets/img/pantai2.jpg);"></div></div>
+				<div class="bg"><div style="background-image: url(assets/img/pantai1.jpg);"></div></div>
+
 				<div class="item active">
-					<h5>Lorem Ipsum 1</h5>
-					<span>Location</span>
+					<div class="title">
+						<h5>Lorem Ipsum 1</h5>
+						<span>Location</span>
+					</div>
+					<img src="assets/icon/right-arrow.png">
 				</div>
 				<div class="item">
-					<h5>Lorem Ipsum 2</h5>
-					<span>Location</span>
+					<div class="title">
+						<h5>Lorem Ipsum 2</h5>
+						<span>Location</span>
+					</div>
+					<img src="assets/icon/right-arrow.png">
 				</div>
 				<div class="item">
-					<h5>Lorem Ipsum 3</h5>
-					<span>Location</span>
+					<div class="title">
+						<h5>Lorem Ipsum 3</h5>
+						<span>Location</span>
+					</div>
+					<img src="assets/icon/right-arrow.png">
 				</div>
 				<div class="item">
-					<h5>Lorem Ipsum 4</h5>
-					<span>Location</span>
+					<div class="title">
+						<h5>Lorem Ipsum 4</h5>
+						<span>Location</span>
+					</div>
+					<img src="assets/icon/right-arrow.png">
 				</div>
 				<div class="item">
-					<h5>Lorem Ipsum 5</h5>
-					<span>Location</span>
+					<div class="title">
+						<h5>Lorem Ipsum 5</h5>
+						<span>Location</span>
+					</div>
+					<img src="assets/icon/right-arrow.png">
 				</div>
 			</div>
 		</div>
@@ -102,8 +123,12 @@
 			if (index == 0 || prevIndex == 0) { time = 1000 } else { time = 500 }
 			setTimeout(() => {
 				$('.home .desc .item').eq(index).addClass('active');
-				$('.home .img .item').eq(index).addClass('active');
+				$('.home .img .bg').eq(index).addClass('active');
 			}, time);
+			setTimeout(() => {
+				$('.home .img .bg').eq(prevIndex).removeClass('active');
+				$('.home .img .item').eq(index).addClass('active');
+			}, time+600);
 		});
 	</script>
 </body>
