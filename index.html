@@ -109,41 +109,84 @@
 	</div>
 
 	<script>
+		progress = false;
+
+		$(window).bind('mousewheel', function(event) {
+		    if (event.originalEvent.wheelDelta >= 0) {
+		        slide('prev');
+		    }
+		    else {
+		        slide('next');
+		    }
+		});
+		$(document).keydown(function(e) {
+		    switch(e.which) {
+		        case 37: slide('prev');
+		        break;
+
+		        case 38: slide('prev');
+		        break;
+
+		        case 39: slide('next');
+		        break;
+
+		        case 40: slide('next');
+		        break;
+
+		        default: return;
+		    }
+		    e.preventDefault();
+		});
 		$('#indicator .item').click(function() {
-			index = $(this).index();
+			slide($(this).index());
+		});
+
+		function slide(target) {
+			if (progress) {return}
+			valid = true;
 			$.each($('#indicator .item'), (key,data) => {
 				if ($('#indicator .item').eq(key).hasClass('active')) {
-					prevIndex = key;
+					prev = key;
+					if (target == 'prev') {
+						if (prev == 0) {valid = false}
+						target = prev-1;
+					} else if (target == 'next') {
+						if (prev == $('#indicator .item').length-1) {valid = false}
+						target = prev+1;
+					}
 				}
 			});
+			if (!valid) {return}
+			progress = true;
 
 			$('#indicator .item').removeClass('active');
-			$(this).addClass('active');
+			$('#indicator .item').eq(target).addClass('active');
 
 			setTimeout(() => {
-				if (index == 0) {
+				if (target == 0) {
 					$('.home').removeClass('scrolled');
 				} else {
 					$('.home').addClass('scrolled');
 				}
 			}, 500);
 
-			$('.home .img .bg').eq(prevIndex).css('opacity','0');
+			$('.home .img .bg').eq(prev).css('opacity','0');
 			$('.home .desc .item').removeClass('active');
 			$('.home .img .item').removeClass('active');
-			if (index == 0 || prevIndex == 0) {
+			if (target == 0 || prev == 0) {
 				time = 1000;
 			} else { time = 500 }
 			setTimeout(() => {
-				$('.home .desc .item').eq(index).addClass('active');
-				$('.home .img .bg').eq(index).addClass('active');
+				$('.home .desc .item').eq(target).addClass('active');
+				$('.home .img .bg').eq(target).addClass('active');
 			}, time);
 			setTimeout(() => {
-				$('.home .img .bg').eq(prevIndex).css('opacity','1');
-				$('.home .img .bg').eq(prevIndex).removeClass('active');
-				$('.home .img .item').eq(index).addClass('active');
+				$('.home .img .bg').eq(prev).css('opacity','1');
+				$('.home .img .bg').eq(prev).removeClass('active');
+				$('.home .img .item').eq(target).addClass('active');
+				progress = false;
 			}, time+600);
-		});
+		}
 	</script>
 </body>
 </html>
