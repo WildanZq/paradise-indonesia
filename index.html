@@ -27,27 +27,27 @@
 			<div class="item active">
 				<h1>INDONESIA</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button class="btn">More Information</button>
+				<a href="detail.html" class="btn">More Information</a>
 			</div>
 			<div class="item">
 				<h1>TITLE FOR CONTENT 2</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button class="btn">More Information</button>
+				<a href="detail.html" class="btn">More Information</a>
 			</div>
 			<div class="item">
 				<h1>TITLE FOR CONTENT 3</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button class="btn">More Information</button>
+				<a href="detail.html" class="btn">More Information</a>
 			</div>
 			<div class="item">
 				<h1>TITLE FOR CONTENT 4</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button class="btn">More Information</button>
+				<a href="detail.html" class="btn">More Information</a>
 			</div>
 			<div class="item">
 				<h1>TITLE FOR CONTENT 5</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				<button class="btn">More Information</button>
+				<a href="detail.html" class="btn">More Information</a>
 			</div>
 		</div>
 		<div class="img">
@@ -59,41 +59,51 @@
 				<div class="bg"><div style="background-image: url(assets/img/pantai2.jpg);"></div></div>
 				<div class="bg"><div style="background-image: url(assets/img/pantai1.jpg);"></div></div>
 
-				<div class="item active">
-					<div class="title">
-						<h5>Lorem Ipsum 1</h5>
-						<span>Location</span>
+				<a href="detail.html">
+					<div class="item active">
+						<div class="title">
+							<h5>Lorem Ipsum 1</h5>
+							<span>Location</span>
+						</div>
+						<img src="assets/icon/right-arrow.png">
 					</div>
-					<img src="assets/icon/right-arrow.png">
-				</div>
-				<div class="item">
-					<div class="title">
-						<h5>Lorem Ipsum 2</h5>
-						<span>Location</span>
+				</a>
+				<a href="detail.html">
+					<div class="item">
+						<div class="title">
+							<h5>Lorem Ipsum 2</h5>
+							<span>Location</span>
+						</div>
+						<img src="assets/icon/right-arrow.png">
 					</div>
-					<img src="assets/icon/right-arrow.png">
-				</div>
-				<div class="item">
-					<div class="title">
-						<h5>Lorem Ipsum 3</h5>
-						<span>Location</span>
+				</a>
+				<a href="detail.html">
+					<div class="item">
+						<div class="title">
+							<h5>Lorem Ipsum 3</h5>
+							<span>Location</span>
+						</div>
+						<img src="assets/icon/right-arrow.png">
 					</div>
-					<img src="assets/icon/right-arrow.png">
-				</div>
-				<div class="item">
-					<div class="title">
-						<h5>Lorem Ipsum 4</h5>
-						<span>Location</span>
+				</a>
+				<a href="detail.html">
+					<div class="item">
+						<div class="title">
+							<h5>Lorem Ipsum 4</h5>
+							<span>Location</span>
+						</div>
+						<img src="assets/icon/right-arrow.png">
 					</div>
-					<img src="assets/icon/right-arrow.png">
-				</div>
-				<div class="item">
-					<div class="title">
-						<h5>Lorem Ipsum 5</h5>
-						<span>Location</span>
+				</a>
+				<a href="detail.html">
+					<div class="item">
+						<div class="title">
+							<h5>Lorem Ipsum 5</h5>
+							<span>Location</span>
+						</div>
+						<img src="assets/icon/right-arrow.png">
 					</div>
-					<img src="assets/icon/right-arrow.png">
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -118,14 +128,18 @@
 				}
 			}, 500);
 
+			$('.home .img .bg').eq(prevIndex).css('opacity','0');
 			$('.home .desc .item').removeClass('active');
 			$('.home .img .item').removeClass('active');
-			if (index == 0 || prevIndex == 0) { time = 1000 } else { time = 500 }
+			if (index == 0 || prevIndex == 0) {
+				time = 1000;
+			} else { time = 500 }
 			setTimeout(() => {
 				$('.home .desc .item').eq(index).addClass('active');
 				$('.home .img .bg').eq(index).addClass('active');
 			}, time);
 			setTimeout(() => {
+				$('.home .img .bg').eq(prevIndex).css('opacity','1');
 				$('.home .img .bg').eq(prevIndex).removeClass('active');
 				$('.home .img .item').eq(index).addClass('active');
 			}, time+600);
