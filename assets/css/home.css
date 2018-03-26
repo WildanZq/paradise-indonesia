@@ -98,7 +98,7 @@
 	transform: translateX(-20px);
 	position: absolute;
 	width: 50%;
-	padding-left: 100px;
+	padding-left: 120px;
 	padding-right: 180px;
 	overflow: visible;
 	z-index: -1;
@@ -223,6 +223,7 @@
 @media (max-width: 1024px) {
 	.home .desc .item {
 		padding-right: 100px;
+		padding-left: 100px;
 	}
 	.home .img .primary {
 		left: -8%;
