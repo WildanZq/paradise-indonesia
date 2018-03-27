@@ -1,3 +1,7 @@
+.logo-white {
+	display: none;
+}
+
 #nav.active #nav-button, #nav.active #nav-button:after, #nav.active #nav-button:before {
 	border-color: white;
 }
@@ -240,6 +244,11 @@
 	}
 }
 @media (max-width: 768px) {
+	.logo-white, .logo {
+		display: block;
+		left: 65px !important;
+	}
+
 	#nav-button, #nav-button:after, #nav-button:before {
 		border-color: white;
 	}

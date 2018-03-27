@@ -26,3 +26,6 @@ $('.love').click((e) => {
 $('.btn-search').click(() => {
 	window.location.href = "search.html";
 });
+$('#logo').click(() => {
+	window.location.href = "index.html";
+});
