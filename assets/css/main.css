@@ -210,3 +210,11 @@ span {
 		font-size: 40px;
 	}
 }
+@media (max-width: 768px) {
+	#nav .nav-wrapper .navbar {
+		width: 100vw;
+	}
+	#nav .nav-wrapper .map {
+		display: none;
+	}
+}
