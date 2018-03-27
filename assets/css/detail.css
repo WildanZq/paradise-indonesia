@@ -21,11 +21,18 @@
 	z-index: 5;
 }
 .detail .head .img {
+	width: auto !important;
   	height: 426px;
   	background-color: #464646;
   	position: absolute;
   	right: -60px;
   	left: 20%;
+}
+.detail .head .img .item {
+	height: 426px;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
 }
 .detail .map {
 	height: 620px;

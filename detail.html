@@ -4,11 +4,12 @@
 	<title>Indonesia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
 	<link rel="stylesheet" type="text/css" href="assets/css/detail.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+	<script src="assets/js/owl.carousel.min.js"></script>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQm4c5LaC_mfT8kNwChlXrK3ArnsfVWzw&callback=initMap">
     </script>
@@ -21,7 +22,10 @@
 	<div class="detail">
 		<div class="head">
 			<h1>THE AMAZING BOROBUDUR</h1>
-			<div class="img"></div>
+			<div class="img owl-carousel owl-theme">
+				<div class="item" style="background-image: url('assets/img/pantai1.jpg')"></div>
+				<div class="item" style="background-image: url('assets/img/pantai2.jpg')"></div>
+			</div>
 			<div class="map">
 				<div class="display" id="maps"></div>
 				<div class="desc">
@@ -57,6 +61,13 @@
 		$(document).ready(() => {
 			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
 			$('.detail .map .display').css('height',mapHeight+'px');
+
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:0,
+			    nav:true,
+			    items:1
+			});
 		});
 	</script>
 
