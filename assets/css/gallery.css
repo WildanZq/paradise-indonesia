@@ -27,4 +27,50 @@
 	width: 25%;
 	height: 276px;
 	background-color: #545454;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.gallery .grid .grid-item:before {
+	content: "";
+	position: absolute;
+	bottom: 0; left: 0;
+	height: 90px;
+	width: 100%;
+	background: linear-gradient(rgba(0,0,0,0), black);
+}
+.gallery .grid .grid-item.grid-item--large {
+	width: 50%;
+	height: 552px;
+}
+.gallery .grid .grid-item.grid-item--vertical {
+	height: 552px;
+}
+.gallery .grid .grid-item.grid-item--horizontal {
+	width: 50%;
+}
+.gallery .grid .grid-item .desc {
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	margin: auto;
+	color: white;
+	padding-bottom: 12px;
+	width: 85%;
+}
+.gallery .grid .grid-item .desc h1 {
+	font-size: 16px;
+	margin: 0;
+}
+.gallery .grid .grid-item .desc p {
+	font-size: 12px;
+	margin-top: 4px;
+}
+.gallery .grid .grid-item .desc .love-wrapper {
+	position: absolute;
+	right: 0; bottom: 50%;
+	display: flex;
+	align-items: center;
+}
+.gallery .grid .grid-item .desc .love-wrapper .love {
+	margin-right: 10px;
 }

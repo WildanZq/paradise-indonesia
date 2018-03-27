@@ -18,18 +18,49 @@
 	<div class="gallery">
 		<h1>GALLERY</h1>
 		<div class="grid">
+			<div class="grid-item grid-item--large" style="background-image: url('assets/img/pantai1.jpg')">
+				<div class="desc">
+					<h1>Candi Borobudur</h1>
+					<p>Kota, Prov</p>
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+				</div>
+			</div>
+			<div class="grid-item grid-item--vertical"  style="background-image: url('assets/img/pantai2.jpg')">
+				<div class="desc">
+					<h1>Candi Borobudur</h1>
+					<p>Kota, Prov</p>
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+				</div>
+			</div>
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
-			<div class="grid-item"></div>
+			<div class="grid-item grid-item--horizontal" style="background-image: url('assets/img/pantai1.jpg')">
+				<div class="desc">
+					<h1>Candi Borobudur</h1>
+					<p>Kota, Prov</p>
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+				</div>
+			</div>
 			<div class="grid-item"></div>
 			<div class="grid-item"></div>
 		</div>
 	</div>
 
+	<script src="assets/js/main.js"></script>
 	<script>
 		$(document).ready(() => {
 			$('.grid').packery({
-			  	itemSelector: '.grid-item'
+			  	itemSelector: '.grid-item',
+				percentPosition: true
 			});
 		});
 	</script>

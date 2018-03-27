@@ -134,6 +134,12 @@ span {
 	width: 66vw;
 }
 
+.love {
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
 @media (max-width: 1439px) {
 	h1 {
 		font-size: 50px;
