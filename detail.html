@@ -24,6 +24,17 @@
 				</div>
 				<div class="desc">
 					<a href="#" class="btn">Open Maps</a>
+					<h1>Candi Borobudur</h1>
+					<p>Jl. Badrawati, Borobudur, Magelang, Jawa Tengah</p>
+					<div class="review">
+						<span class="rating">4,6</span>
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-half.png">
+						<img src="assets/icon/star-empty.png">
+						<span class="count">10.029 review</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -39,5 +50,12 @@
 			</p>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(() => {
+			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
+			$('.detail .map .display').css('height',mapHeight+'px');
+		});
+	</script>
 </body>
 </html>

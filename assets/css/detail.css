@@ -9,7 +9,7 @@
 	background-color: #6484c6;
 	min-height: 1500px;
 }
-.detail .head h1 {
+.detail .head > h1 {
 	color: white;
 	position: relative;
 	left: 70%;
@@ -36,19 +36,45 @@
   	transform: translateY(82%);
 }
 .detail .map .display {
-	height: 420px;
+	height: 100%;
 }
 .detail .map .desc {
 	position: absolute;
 	bottom: 0;
 	background-color: white;
 	width: 100%;
-	min-height: 200px;
+	padding: 40px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .detail .map .desc a {
 	position: absolute;
 	right: 20px;
 	top: -20px;
+}
+.detail .map .desc h1 {
+	margin: 0 30px 20px 30px;
+	font-size: 24px;
+}
+.detail .map .desc p {
+	margin: 0 30px 8px 30px;
+}
+.detail .map .desc .review {
+	margin: 0 30px;
+	font-weight: bold;
+}
+.detail .map .desc .review img {
+	width: 12px;
+	height: 12px;
+	vertical-align: baseline;
+}
+.detail .map .desc .review .rating {
+	color: #538acc;
+	margin-right: 4px;
+}
+.detail .map .desc .review .count {
+	margin-left: 16px;
 }
 .detail .body p:first-child {
 	padding-top: 180px;
