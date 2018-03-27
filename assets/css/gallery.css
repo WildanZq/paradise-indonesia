@@ -20,7 +20,7 @@
 	width: 80%;
 	margin: auto;
 }
-.gallery .grid {
+.gallery .grid .grid-item {
 	width: 25%;
 	height: 276px;
 	background-color: #545454;
