@@ -80,6 +80,10 @@
 	border-radius: 0;
 	width: 16px;
 	height: 2px;
+	background: #b2b2b2;
+}
+.detail .head .img .owl-dot.active span {
+	background: #fff !important;
 }
 .detail .map {
 	height: 620px;
