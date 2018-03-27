@@ -17,17 +17,39 @@
 <body>
 	<nav id="nav">
 		<div id="nav-button"></div>
+		<div class="nav-wrapper">
+			<div class="navbar">
+				<a href="index.html" class="link">Home</a>
+				<a href="#" class="link">Destination</a>
+				<a href="#" class="link">Food</a>
+				<a href="#" class="link">Culture</a>
+				<a href="gallery.html" class="link">Gallery</a>
+			</div>
+			<div class="map" id="maps"></div>
+		</div>
 	</nav>
 
 	<div class="detail">
 		<div class="head">
 			<h1>THE AMAZING BOROBUDUR</h1>
 			<div class="img owl-carousel owl-theme">
-				<div class="item" style="background-image: url('assets/img/pantai1.jpg')"></div>
-				<div class="item" style="background-image: url('assets/img/pantai2.jpg')"></div>
+				<div class="item" style="background-image: url('assets/img/pantai1.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
+				<div class="item" style="background-image: url('assets/img/pantai2.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
 			</div>
 			<div class="map">
-				<div class="display" id="maps"></div>
+				<div class="display" id="maps-detail"></div>
 				<div class="desc">
 					<a href="#" class="btn">Open Maps</a>
 					<h1>Candi Borobudur</h1>
@@ -57,6 +79,7 @@
 		</div>
 	</div>
 
+	<script src="assets/js/main.js"></script>
 	<script>
 		$(document).ready(() => {
 			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
@@ -65,8 +88,10 @@
 			$('.owl-carousel').owlCarousel({
 			    loop:true,
 			    margin:0,
-			    nav:true,
-			    items:1
+			    nav:false,
+			    items:1,
+			    autoplay:true,
+			    autoplayTimeout:4000
 			});
 		});
 	</script>
@@ -331,7 +356,7 @@
 
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
-        var map = new google.maps.Map(document.getElementById('maps'), {
+        var mapDet = new google.maps.Map(document.getElementById('maps-detail'), {
           center: {lat: -7.6080100, lng: 110.2035835},
           zoom: 16,
           mapTypeControlOptions: {
@@ -339,8 +364,18 @@
                     'styled_map']
           }
         });
+        var map = new google.maps.Map(document.getElementById('maps'), {
+          center: {lat: 1.0553449, lng: 120.2944621},
+          zoom: 4,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
 
         //Associate the styled map with the MapTypeId and set it to display.
+        mapDet.mapTypes.set('styled_map', styledMapType);
+        mapDet.setMapTypeId('styled_map');
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       }

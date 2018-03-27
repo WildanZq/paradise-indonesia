@@ -1,3 +1,6 @@
+#nav-button, #nav-button:after, #nav-button:before {
+	border-color: white;
+}
 .detail {
 	display: flex;
 }
@@ -29,10 +32,54 @@
   	left: 20%;
 }
 .detail .head .img .item {
+	position: relative;
 	height: 426px;
 	width: 100%;
 	background-position: center;
 	background-size: cover;
+}
+.detail .head .img .item .love-wrapper {
+	position: absolute;
+	bottom: 65px; left: 20px;
+}
+.detail .head .img .btn {
+	position: absolute;
+	bottom: 20px; left: 20px;
+	font-size: 12px;
+	padding: 8px 10px;
+}
+.detail .head .img .owl-nav {
+	position: absolute;
+	top: 0; left: 0;
+	height: 100%;
+	width: 100%;
+}
+.detail .head .img .owl-nav .owl-prev {
+	position: absolute;
+	left: 12px; top: 50%;
+	transform: translateY(-100%);
+}
+.detail .head .img .owl-nav .owl-next {
+	position: absolute;
+	right: 12px; top: 50%;
+	transform: translateY(-100%);
+}
+.detail .head .img .owl-nav .owl-prev:hover, .detail .head .img .owl-nav .owl-next:hover {
+	background: none;
+}
+.detail .head .img .owl-nav .owl-prev span, .detail .head .img .owl-nav .owl-next span {
+	font-size: 40px;
+	color: white;
+}
+.detail .head .img .owl-dots {
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+.detail .head .img .owl-dots span {
+	border-radius: 0;
+	width: 16px;
+	height: 2px;
 }
 .detail .map {
 	height: 620px;

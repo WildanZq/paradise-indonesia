@@ -134,10 +134,16 @@ span {
 	width: 66vw;
 }
 
+.love-wrapper {
+	display: flex;
+	align-items: center;
+	color: white;
+}
 .love {
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
+	margin-right: 10px;
 }
 
 @media (max-width: 1439px) {

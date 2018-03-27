@@ -75,9 +75,4 @@
 .gallery .grid .grid-item .desc .love-wrapper {
 	position: absolute;
 	right: 0; bottom: 50%;
-	display: flex;
-	align-items: center;
-}
-.gallery .grid .grid-item .desc .love-wrapper .love {
-	margin-right: 10px;
 }
