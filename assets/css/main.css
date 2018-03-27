@@ -52,6 +52,11 @@ span {
 .search::placeholder {
 	color: #f2f2f2;
 }
+.btn-search {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
 
 .navbar .search {
 	position: absolute;
@@ -62,9 +67,6 @@ span {
 	position: absolute;
 	top: 20px;
 	right: 26px;
-	background: none;
-	box-shadow: none;
-	padding: 0;
 }
 .navbar .btn-search img {
 	width: 20px;
