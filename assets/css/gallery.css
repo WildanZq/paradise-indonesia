@@ -76,3 +76,14 @@
 	position: absolute;
 	right: 0; bottom: 50%;
 }
+
+@media (max-width: 1024px) {
+	.gallery .grid .grid-item {
+		width: 50%;
+	}
+}
+@media (max-width: 768px) {
+	.gallery .grid .grid-item {
+		width: 100% !important;
+	}
+}
