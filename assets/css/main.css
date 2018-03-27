@@ -78,10 +78,14 @@ span {
 	top: 14px;
 	left: 110px;
 }
+#logo.white {
+	left: 10%;
+}
 
 #nav {
 	position: fixed;
 	z-index: 90;
+	width: 100%;
 }
 #nav-button {
 	z-index: 90;
