@@ -46,12 +46,14 @@ span {
 	z-index: 90;
 }
 #nav-button {
+	z-index: 90;
 	margin: 26px;
 	width: 18px;
 	height:14px;
 	border-top: 2px solid black;
 	position: relative;
 	cursor: pointer;
+	transition: .5s;
 }
 #nav-button:before {
 	content: "";
@@ -73,6 +75,63 @@ span {
 }
 #nav-button:hover::after, #nav-button:hover::before {
 	width: 100%;
+}
+#nav.active #nav-button {
+	transform: rotateZ(45deg);
+}
+#nav.active #nav-button:before {
+	width: 0;
+}
+#nav.active #nav-button:after {
+	transform: rotateZ(-90deg) translateX(50%);
+	width: 100%;
+}
+#nav .nav-wrapper {
+	z-index: 80;
+	position: absolute;
+	left: 0; top: 0;
+	display: flex;
+	background-color: white;
+	width: 100vw;
+	height: 0;
+	overflow: hidden;
+	transition: .8s;
+}
+#nav.active .nav-wrapper {
+	height: 100vh;
+}
+#nav .nav-wrapper .navbar, #nav .nav-wrapper .map {
+	height: 100vh;
+}
+#nav .nav-wrapper .navbar {
+	width: 34vw;
+	background-image: linear-gradient(30deg, #09a9ec, #a06cad);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#nav .nav-wrapper .navbar a {
+	text-decoration: none;
+	color: white;
+	font-size: 22px;
+	margin: 10px 0;
+	position: relative;
+}
+#nav .nav-wrapper .navbar a:after {
+	content: "";
+	position: absolute;
+	bottom: -4px; left: 0; right: 0;
+	margin: auto;
+	width: 0;
+	border-bottom: 2px solid white;
+	transition: .5s;
+}
+#nav .nav-wrapper .navbar a:hover::after {
+	width: 70%;
+}
+#nav .nav-wrapper .map {
+	width: 66vw;
 }
 
 @media (max-width: 1439px) {
