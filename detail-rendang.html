@@ -4,11 +4,12 @@
 	<title>Indonesia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-	<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/detail.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+	<script src="assets/js/owl.carousel.min.js"></script>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQm4c5LaC_mfT8kNwChlXrK3ArnsfVWzw&callback=initMap">
     </script>
@@ -31,179 +32,81 @@
 		</div>
 	</nav>
 
-	<div id="indicator">
-		<div class="item active"><span class="tag">HOME</span></div>
-		<div class="item"><span class="tag">PLACE</span></div>
-		<div class="item"><span class="tag">LANDMARK</span></div>
-		<div class="item"><span class="tag">FOOD</span></div>
-		<div class="item"><span class="tag">CULTURE</span></div>
-	</div>
-
-	<div class="home">
-		<div class="desc">
-			<div class="item active">
-				<h1>PARADISE OF INDONESIA</h1>
-				<p><b>Indonesia</b>, a Southeast Asian nation made up of thousands of volcanic islands, is home to hundreds of ethnic groups speaking many different languages. It’s known for beaches, volcanoes, Komodo dragons and jungles sheltering elephants, orangutans and tigers.</p>
-				<button onclick="slide('next');" class="btn">Explore Now</button>
+	<div class="detail">
+		<div class="head">
+			<h1>THE DELICIOUS RENDANG</h1>
+			<div class="img owl-carousel owl-theme">
+				<div class="item" style="background-image: url('assets/img/rendang.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
+				<div class="item" style="background-image: url('assets/img/rendang2.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
 			</div>
-			<div class="item">
-				<h1>FUN PLACE TO GO</h1>
-				<p><b>Indonesia</b> is the fourth most populous country in the world and is made up of more than 17,000 islands; however, often when people think of Indonesia, all that comes to mind is Bali. Although Bali is awesome in its own right, travelling to Indonesia offers so much more and has much to offer.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>INDONESIAN LANDMARKS</h1>
-				<p><b>Indonesian</b> heritage must be kept exist to remember the people of the past that involves in its construction. In each Indonesia province, there exist the most unique buildings regarded as tourist sites, Below are a few of the most famous Indonesian landmarks in the Indonesia province.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>THINGS TO TRY</h1>
-				<p><b>Indonesian</b> food is one of the most vibrant and colourful cuisines in the world, full of intense flavour. With 6,000 islands, there are many regional specialties, but wherever you are in Indonesia, most meals, including breakfast, are based around rice. Literally meaning "fried rice", nasi goreng is considered the national dish of Indonesia and can be found everywhere from street hawkers carts to dinner parties or restaurants.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>ART AND CULTURE</h1>
-				<p><b>Indonesia</b> is a country rich in cultural diversity, home to around 300 different ethnicities and 700 languages. It is one of the largest countries in the world, with 17,500 magnificent islands, some of which are still unexplored. </p>
-				<a href="detail.html" class="btn">More Information</a>
+			<div class="map">
+				<div class="display" id="maps-detail"></div>
+				<div class="desc">
+					<a href="#" class="btn">Open Maps</a>
+					<h1>Rendang</h1>
+					<p>Padang, West Sumatera</p>
+					<div class="review">
+						<span class="rating">4,6</span>
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-half.png">
+						<img src="assets/icon/star-empty.png">
+						<span class="count">14.029 review</span>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="img">
-			<div class="primary">
-				<div class="bg active"><div style="background-image: url(assets/img/rajaampat.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/bromo.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/monas.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/rendang.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/karapansapi.jpg);"></div></div>
-
-				<a href="detail-rajaampat.html">
-					<div class="item active">
-						<div class="title">
-							<h5>Kepulauan Raja Ampat</h5>
-							<span>Raja Ampat, West Papua</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-bromo.html">
-					<div class="item">
-						<div class="title">
-							<h5>Gunung Bromo</h5>
-							<span>Malang, East Java</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-monas.html">
-					<div class="item">
-						<div class="title">
-							<h5>Monas (National Monument)</h5>
-							<span>Gambir, Central Jakarta</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-rendang.html">
-					<div class="item">
-						<div class="title">
-							<h5>Rendang</h5>
-							<span>Padang, West Sumatera</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-karapansapi.html">
-					<div class="item">
-						<div class="title">
-							<h5>Karapan Sapi</h5>
-							<span>Madura, East Java</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-			</div>
+		<div class="body">
+			<p>
+				Rendang was voted most delicious food in the world by more than 35,000 readers of CNN Travel in a poll on Facebook in 2011.
+				Our virtual trip to Indonesia therefore had to feature this dish from the Province of West Sumatra. Many of the recipes that we have been featured on 196 flavors are also included in this list. The delicious nasi goreng, also from Indonesia is in second place, pad thai in fifth place and the soto ayam salad in sixth position to name a few.
+			</p>
+			<p>
+				Sumatra is the island that was the most affected by the tsunami of which we commemorate the sad tenth anniversary this week. Aceh, the province nearest to the earthquake is indeed a bit further north on the island. I remember this tragedy vividly as my wife Anne and I were on a 2-week cruise in the Caribbean and were glued to CNN for the last few days of our vacation.
+			</p>
+			<p>
+				Rendang is originally a dish from the Minangkabau ethnic group but it is also made by the Malays in Malaysia, Singapore, in the south of the Philippines and in Brunei.
+			</p>
+			<p>
+				Rendang is a sort of beef curry, simmered for a long time, which allows the meat to soak up all the flavors that make up this unique dish. Depending on the desired end result, cooking rendang in coconut milk and all the spices can be shorter or longer. Classic rendang must be dry enough and should cook for at least 2 to 3 hours. When the curry is cooked for less time, it is a little wet and brown in color, and it is called kalio. When simmered for less time, it is soupy, closer to a Thai curry and is called gulai. It is then typically yellow. Traditional rendang that simmers for hours turns dark brown when it is finished cooking.
+			</p>
+			<p>
+				The spices and ingredients mixture that is the basis for rendang is called pemasak in Minangkabau. Some of the ingredients that are used have antimicrobial properties. If it is cooked appropriately, dry rendang can often be kept for 3 to 4 weeks at room temperature and up to six months in a refrigerator.
+			</p>
+			<p>
+				Rendang can be served with white rice, but also ketupat (a kind of pressed rice cake), lemang (sticky rice cooked in hollowed bamboo stick), and vegetables such as cassava leaves or young jackfruit.
+			</p>
 		</div>
 	</div>
 
 	<script src="assets/js/main.js"></script>
 	<script>
-		progress = false;
+		$(document).ready(() => {
+			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
+			$('.detail .map .display').css('height',mapHeight+'px');
 
-		$(window).bind('mousewheel', function(event) {
-		    if (event.originalEvent.wheelDelta >= 0) {
-		        slide('prev');
-		    }
-		    else {
-		        slide('next');
-		    }
-		});
-		$(document).keydown(function(e) {
-		    switch(e.which) {
-		        case 37: slide('prev');
-		        break;
-
-		        case 38: slide('prev');
-		        break;
-
-		        case 39: slide('next');
-		        break;
-
-		        case 40: slide('next');
-		        break;
-
-		        default: return;
-		    }
-		    e.preventDefault();
-		});
-		$('#indicator .item').click(function() {
-			slide($(this).index());
-		});
-
-		function slide(target) {
-			if (progress) {return}
-			valid = true;
-			$.each($('#indicator .item'), (key,data) => {
-				if ($('#indicator .item').eq(key).hasClass('active')) {
-					prev = key;
-					if (target == 'prev') {
-						if (prev == 0) {valid = false}
-						target = prev-1;
-					} else if (target == 'next') {
-						if (prev == $('#indicator .item').length-1) {valid = false}
-						target = prev+1;
-					}
-				}
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:0,
+			    nav:false,
+			    items:1,
+			    autoplay:true,
+			    autoplayTimeout:4000
 			});
-			if (!valid) {return}
-			progress = true;
-
-			$('#indicator .item').removeClass('active');
-			$('#indicator .item').eq(target).addClass('active');
-
-			setTimeout(() => {
-				if (target == 0) {
-					$('.home').removeClass('scrolled');
-				} else {
-					$('.home').addClass('scrolled');
-				}
-			}, 500);
-
-			$('.home .img .bg').eq(prev).css('opacity','0');
-			$('.home .desc .item').removeClass('active');
-			$('.home .img .item').removeClass('active');
-			if (target == 0 || prev == 0) {
-				time = 1000;
-			} else { time = 500 }
-			setTimeout(() => {
-				$('.home .desc .item').eq(target).addClass('active');
-				$('.home .img .bg').eq(target).addClass('active');
-			}, time);
-			setTimeout(() => {
-				$('.home .img .bg').eq(prev).css('opacity','1');
-				$('.home .img .bg').eq(prev).removeClass('active');
-				$('.home .img .item').eq(target).addClass('active');
-				progress = false;
-			}, time+600);
-		}
+		});
 	</script>
 
 	<script>
@@ -256,14 +159,6 @@
 			  },
 			  {
 			    "featureType": "administrative.country",
-			    "stylers": [
-			      {
-			        "visibility": "on"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.country",
 			    "elementType": "labels.text.fill",
 			    "stylers": [
 			      {
@@ -276,14 +171,6 @@
 			    "stylers": [
 			      {
 			        "visibility": "off"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.locality",
-			    "stylers": [
-			      {
-			        "visibility": "on"
 			      }
 			    ]
 			  },
@@ -482,6 +369,14 @@
 
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
+        var mapDet = new google.maps.Map(document.getElementById('maps-detail'), {
+          center: {lat: -0.9370371, lng: 100.394213},
+          zoom: 11,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
         var map = new google.maps.Map(document.getElementById('maps'), {
           center: {lat: 1.0553449, lng: 120.2944621},
           zoom: 4,
@@ -492,6 +387,8 @@
         });
 
         //Associate the styled map with the MapTypeId and set it to display.
+        mapDet.mapTypes.set('styled_map', styledMapType);
+        mapDet.setMapTypeId('styled_map');
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       }

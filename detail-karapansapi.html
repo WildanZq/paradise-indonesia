@@ -4,11 +4,12 @@
 	<title>Indonesia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-	<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/detail.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+	<script src="assets/js/owl.carousel.min.js"></script>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQm4c5LaC_mfT8kNwChlXrK3ArnsfVWzw&callback=initMap">
     </script>
@@ -31,179 +32,80 @@
 		</div>
 	</nav>
 
-	<div id="indicator">
-		<div class="item active"><span class="tag">HOME</span></div>
-		<div class="item"><span class="tag">PLACE</span></div>
-		<div class="item"><span class="tag">LANDMARK</span></div>
-		<div class="item"><span class="tag">FOOD</span></div>
-		<div class="item"><span class="tag">CULTURE</span></div>
-	</div>
-
-	<div class="home">
-		<div class="desc">
-			<div class="item active">
-				<h1>PARADISE OF INDONESIA</h1>
-				<p><b>Indonesia</b>, a Southeast Asian nation made up of thousands of volcanic islands, is home to hundreds of ethnic groups speaking many different languages. It’s known for beaches, volcanoes, Komodo dragons and jungles sheltering elephants, orangutans and tigers.</p>
-				<button onclick="slide('next');" class="btn">Explore Now</button>
+	<div class="detail">
+		<div class="head">
+			<h1>THE EXCITING KARAPAN SAPI</h1>
+			<div class="img owl-carousel owl-theme">
+				<div class="item" style="background-image: url('assets/img/karapansapi.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
+				<div class="item" style="background-image: url('assets/img/karapansapi2.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
 			</div>
-			<div class="item">
-				<h1>FUN PLACE TO GO</h1>
-				<p><b>Indonesia</b> is the fourth most populous country in the world and is made up of more than 17,000 islands; however, often when people think of Indonesia, all that comes to mind is Bali. Although Bali is awesome in its own right, travelling to Indonesia offers so much more and has much to offer.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>INDONESIAN LANDMARKS</h1>
-				<p><b>Indonesian</b> heritage must be kept exist to remember the people of the past that involves in its construction. In each Indonesia province, there exist the most unique buildings regarded as tourist sites, Below are a few of the most famous Indonesian landmarks in the Indonesia province.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>THINGS TO TRY</h1>
-				<p><b>Indonesian</b> food is one of the most vibrant and colourful cuisines in the world, full of intense flavour. With 6,000 islands, there are many regional specialties, but wherever you are in Indonesia, most meals, including breakfast, are based around rice. Literally meaning "fried rice", nasi goreng is considered the national dish of Indonesia and can be found everywhere from street hawkers carts to dinner parties or restaurants.</p>
-				<a href="detail.html" class="btn">More Information</a>
-			</div>
-			<div class="item">
-				<h1>ART AND CULTURE</h1>
-				<p><b>Indonesia</b> is a country rich in cultural diversity, home to around 300 different ethnicities and 700 languages. It is one of the largest countries in the world, with 17,500 magnificent islands, some of which are still unexplored. </p>
-				<a href="detail.html" class="btn">More Information</a>
+			<div class="map">
+				<div class="display" id="maps-detail"></div>
+				<div class="desc">
+					<a href="#" class="btn">Open Maps</a>
+					<h1>Madura Island</h1>
+					<p>Madura, East Java</p>
+					<div class="review">
+						<span class="rating">4,6</span>
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-half.png">
+						<img src="assets/icon/star-empty.png">
+						<span class="count">10.029 review</span>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="img">
-			<div class="primary">
-				<div class="bg active"><div style="background-image: url(assets/img/rajaampat.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/bromo.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/monas.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/rendang.jpg);"></div></div>
-				<div class="bg"><div style="background-image: url(assets/img/karapansapi.jpg);"></div></div>
-
-				<a href="detail-rajaampat.html">
-					<div class="item active">
-						<div class="title">
-							<h5>Kepulauan Raja Ampat</h5>
-							<span>Raja Ampat, West Papua</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-bromo.html">
-					<div class="item">
-						<div class="title">
-							<h5>Gunung Bromo</h5>
-							<span>Malang, East Java</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-monas.html">
-					<div class="item">
-						<div class="title">
-							<h5>Monas (National Monument)</h5>
-							<span>Gambir, Central Jakarta</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-rendang.html">
-					<div class="item">
-						<div class="title">
-							<h5>Rendang</h5>
-							<span>Padang, West Sumatera</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-				<a href="detail-karapansapi.html">
-					<div class="item">
-						<div class="title">
-							<h5>Karapan Sapi</h5>
-							<span>Madura, East Java</span>
-						</div>
-						<img src="assets/icon/right-arrow.png">
-					</div>
-				</a>
-			</div>
+		<div class="body">
+			<p>
+				Karapan Sapi, is Madura’s annual traditional event, it is such a bull racing tournament. It is usually held at week end within August to September, or ideally before or after the fasting month. Date back to the early begin, Karapan Sapi was exist before 15 Century. The championship is starts from the district level to the regency level and moving forward to the level Residence. Last, the final will be held on September or October in the city of Pamekasan to compete for President Cup.
+			</p>
+			<p>
+				Karapan Sapi is such a prestigious event for Madurese people, for the bull’s owner will feel socially uplifted when their bulls can be a champion. This event is becomes an outstanding-event-party for Madurese, it needs more energy, more beneficial times and, of course, more money to spend. Regarding this event, the bull is becomes an investment out of gold and money. Thus, the owner will more concern to make their bull winning in this race.
+			</p>
+			<p>
+				Karapan Sapi is such a prestigious event for Madurese people, for the bull’s owner will feel socially uplifted when their bulls can be a champion. This event is becomes an outstanding-event-party for Madurese, it needs more energy, more beneficial times and, of course, more money to spend. Regarding this event, the bull is becomes an investment out of gold and money. Thus, the owner will more concern to make their bull winning in this race.
+			</p>
+			<p>
+				Looking at the background, bull is not an animal type for racing activities for are not classified as fast runner animals. But this can be solved by training the bull twice or three times a week, not more than that. The exercise is held around 3pm before dawn.
+			</p>
+			<p>
+				It is said that a pair of healthy and strong bulls will cost Rp. 4 millions per pair for their food and other maintenance. Moreover, they are also consuming some traditional herb and dozens of chicken eggs per days.
+			</p>
+			<p>
+				To make the bulls running as fast as they can, the tail are tied with nails and it was also given the chili and ginger. The jockey’s whip is also added by nails. It seems sadistic here, but that is the way, the culture. The more they get hurt, the more of the bull will run faster. God bless the cows.
+			</p>
 		</div>
 	</div>
 
 	<script src="assets/js/main.js"></script>
 	<script>
-		progress = false;
+		$(document).ready(() => {
+			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
+			$('.detail .map .display').css('height',mapHeight+'px');
 
-		$(window).bind('mousewheel', function(event) {
-		    if (event.originalEvent.wheelDelta >= 0) {
-		        slide('prev');
-		    }
-		    else {
-		        slide('next');
-		    }
-		});
-		$(document).keydown(function(e) {
-		    switch(e.which) {
-		        case 37: slide('prev');
-		        break;
-
-		        case 38: slide('prev');
-		        break;
-
-		        case 39: slide('next');
-		        break;
-
-		        case 40: slide('next');
-		        break;
-
-		        default: return;
-		    }
-		    e.preventDefault();
-		});
-		$('#indicator .item').click(function() {
-			slide($(this).index());
-		});
-
-		function slide(target) {
-			if (progress) {return}
-			valid = true;
-			$.each($('#indicator .item'), (key,data) => {
-				if ($('#indicator .item').eq(key).hasClass('active')) {
-					prev = key;
-					if (target == 'prev') {
-						if (prev == 0) {valid = false}
-						target = prev-1;
-					} else if (target == 'next') {
-						if (prev == $('#indicator .item').length-1) {valid = false}
-						target = prev+1;
-					}
-				}
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:0,
+			    nav:false,
+			    items:1,
+			    autoplay:true,
+			    autoplayTimeout:4000
 			});
-			if (!valid) {return}
-			progress = true;
-
-			$('#indicator .item').removeClass('active');
-			$('#indicator .item').eq(target).addClass('active');
-
-			setTimeout(() => {
-				if (target == 0) {
-					$('.home').removeClass('scrolled');
-				} else {
-					$('.home').addClass('scrolled');
-				}
-			}, 500);
-
-			$('.home .img .bg').eq(prev).css('opacity','0');
-			$('.home .desc .item').removeClass('active');
-			$('.home .img .item').removeClass('active');
-			if (target == 0 || prev == 0) {
-				time = 1000;
-			} else { time = 500 }
-			setTimeout(() => {
-				$('.home .desc .item').eq(target).addClass('active');
-				$('.home .img .bg').eq(target).addClass('active');
-			}, time);
-			setTimeout(() => {
-				$('.home .img .bg').eq(prev).css('opacity','1');
-				$('.home .img .bg').eq(prev).removeClass('active');
-				$('.home .img .item').eq(target).addClass('active');
-				progress = false;
-			}, time+600);
-		}
+		});
 	</script>
 
 	<script>
@@ -256,14 +158,6 @@
 			  },
 			  {
 			    "featureType": "administrative.country",
-			    "stylers": [
-			      {
-			        "visibility": "on"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.country",
 			    "elementType": "labels.text.fill",
 			    "stylers": [
 			      {
@@ -276,14 +170,6 @@
 			    "stylers": [
 			      {
 			        "visibility": "off"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.locality",
-			    "stylers": [
-			      {
-			        "visibility": "on"
 			      }
 			    ]
 			  },
@@ -482,6 +368,14 @@
 
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
+        var mapDet = new google.maps.Map(document.getElementById('maps-detail'), {
+          center: {lat: -7.014644, lng: 113.393264},
+          zoom: 8,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
         var map = new google.maps.Map(document.getElementById('maps'), {
           center: {lat: 1.0553449, lng: 120.2944621},
           zoom: 4,
@@ -492,6 +386,8 @@
         });
 
         //Associate the styled map with the MapTypeId and set it to display.
+        mapDet.mapTypes.set('styled_map', styledMapType);
+        mapDet.setMapTypeId('styled_map');
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       }
