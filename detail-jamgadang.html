@@ -4,12 +4,12 @@
 	<title>Indonesia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-	<link rel="stylesheet" type="text/css" href="assets/css/list.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/detail.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/packery.pkgd.min.js"></script>
-
+	<script src="assets/js/owl.carousel.min.js"></script>
 	<script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQm4c5LaC_mfT8kNwChlXrK3ArnsfVWzw&callback=initMap">
     </script>
@@ -32,46 +32,79 @@
 		</div>
 	</nav>
 
-	<div class="list">
-		<h1>FUN PLACE TO GO</h1>
-		<div class="tab">
-			<button class="active item">All</button>
-			<button class="item">HIKING</button>
-			<button class="item">DIVING</button>
-			<button class="item">THEME PARK</button>
+	<div class="detail">
+		<div class="head">
+			<h1>THE CLOCK TOWER OF JAM GADANG</h1>
+			<div class="img owl-carousel owl-theme">
+				<div class="item" style="background-image: url('assets/img/jamgadang.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
+				<div class="item" style="background-image: url('assets/img/jamgadang2.jpg')">
+					<div class="love-wrapper">
+						<img class="love" src="assets/icon/love-empty.png">
+						<span class="love-counter">143</span>
+					</div>
+					<a class="btn" href="gallery.html">More Image</a>
+				</div>
+			</div>
+			<div class="map">
+				<div class="display" id="maps-detail"></div>
+				<div class="desc">
+					<a href="#" class="btn">Open Maps</a>
+					<h1>JAM GADANG</h1>
+					<p>Padang, West Sumatra</p>
+					<div class="review">
+						<span class="rating">4,6</span>
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-full.png">
+						<img src="assets/icon/star-half.png">
+						<img src="assets/icon/star-empty.png">
+						<span class="count">10.029 review</span>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="card-wrapper">
-			<div class="card card-large">
-				<div class="bg" style="background-image: url('assets/img/bromo.jpg');"></div>
-				<div class="desc">
-					<h1>MOUNT BROMO</h1>
-					<span>HIKING | ETC</span>
-					<p>Mount Bromo which stands tall at 2329 m is the most iconic and the most hiked mountain in Indonesia. This is one of the top 10 things to do in Java and rightly so. The mountain beckons majestically despite having the entire top blown off and with a crater inside that keeps spewing off-white sulphurous smoke.</p>
-					<a href="detail-bromo.html" class="btn">Read More</a>
-				</div>
-			</div>
-			<div class="card">
-				<div class="bg" style="background-image: url('assets/img/danautoba.jpg');"></div>
-				<div class="desc">
-					<h1>TOBA LAKE</h1>
-					<span>DIVING | ETC</span>
-					<p>Lake Toba is one of the awesome natural wonders of the world. This enormous crater lake has an island almost the size of Singapore in its centre. At over 1,145 square km, and a depth of 450 meters, Lake Toba is actually more like an ocean. This is the largest lake in Southeast Asia and one of the deepest lakes in the world.</p>
-					<a href="detail-danautoba.html" class="btn">Read More</a>
-				</div>
-			</div>
-			<div class="card">
-				<div class="bg" style="background-image: url('assets/img/pantai3warna.jpg');"></div>
-				<div class="desc">
-					<h1>THREE COLOR BEACH</h1>
-					<span>DIVING | ETC</span>
-					<p>The beauty of the beach in Indonesia is not lost with the beaches in foreign countries. Even recently enough attention of foreign tourists. One is a beach located in Malang, East Java.</p>
-					<a href="detail-pantai3warna.html" class="btn">Read More</a>
-				</div>
-			</div>
+		<div class="body">
+			<p>
+				The Clock Tower of Bukittinggi or Jam Gadang is the landmark of Bukittinggi and West Sumatra in Indonesia. The typical symbol of West Sumatra also has a story and unique because has been already decades years ago. Jam Gadang was built in 1926 by architect Yazin and Sutan Gigi Ameh. Laying the first stone, the Clock Tower was carried out Rook Maker's first son who was then 6 years old. This clock is a gift from the Queen of the Netherlands to Controleur (Secretary of State).
+			</p>
+			<p>
+				Distinctive symbols Bukittinggi and West Sumatra's has a story and uniqueness in its history. It can be traced from the ornaments on the Clock Tower. In the Dutch colonial period, this ornament clock round and on it stands a statue of a rooster.
+			</p>
+			<p>
+				During the Japanese occupation, ornaments the clock turned into a pagoda. While in the period after independence, the ornament shape again changed to the shape gonjong traditional Minangkabau house.
+			</p>
+			<p>
+				The numbers on the clock are also unique. The number four in Roman numerals are usually written by IV, but at the Jam Gadang is listed with IIII.
+			</p>
+			<p>
+				From the tower of Jam Gadang, the tourists can see the panorama of Bukittinggi city is composed of hills, valleys and buildings lined up in the middle of the city not to be missed.
+			</p>
 		</div>
 	</div>
 
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(document).ready(() => {
+			mapHeight = $('.detail .map').height() - $('.detail .map .desc').height() - 80;
+			$('.detail .map .display').css('height',mapHeight+'px');
+
+			$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:0,
+			    nav:false,
+			    items:1,
+			    autoplay:true,
+			    autoplayTimeout:4000
+			});
+		});
+	</script>
+
 	<script>
       function initMap() {
 
@@ -122,14 +155,6 @@
 			  },
 			  {
 			    "featureType": "administrative.country",
-			    "stylers": [
-			      {
-			        "visibility": "on"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.country",
 			    "elementType": "labels.text.fill",
 			    "stylers": [
 			      {
@@ -142,14 +167,6 @@
 			    "stylers": [
 			      {
 			        "visibility": "off"
-			      }
-			    ]
-			  },
-			  {
-			    "featureType": "administrative.locality",
-			    "stylers": [
-			      {
-			        "visibility": "on"
 			      }
 			    ]
 			  },
@@ -348,6 +365,14 @@
 
         // Create a map object, and include the MapTypeId to add
         // to the map type control.
+        var mapDet = new google.maps.Map(document.getElementById('maps-detail'), {
+          center: {lat: -0.305276, lng: 100.369501},
+          zoom: 18,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
         var map = new google.maps.Map(document.getElementById('maps'), {
           center: {lat: 1.0553449, lng: 120.2944621},
           zoom: 4,
@@ -358,9 +383,12 @@
         });
 
         //Associate the styled map with the MapTypeId and set it to display.
+        mapDet.mapTypes.set('styled_map', styledMapType);
+        mapDet.setMapTypeId('styled_map');
         map.mapTypes.set('styled_map', styledMapType);
         map.setMapTypeId('styled_map');
       }
     </script>
+
 </body>
 </html>
