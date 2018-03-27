@@ -20,6 +20,9 @@
 	width: 80%;
 	margin: auto;
 }
+.gallery .grid {
+	margin-bottom: 80px;
+}
 .gallery .grid .grid-item {
 	width: 25%;
 	height: 276px;
