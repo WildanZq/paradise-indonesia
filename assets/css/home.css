@@ -1,3 +1,7 @@
+#nav.active #nav-button, #nav.active #nav-button:after, #nav.active #nav-button:before {
+	border-color: white;
+}
+
 #indicator {
 	position: fixed;
 	height: 100vh;

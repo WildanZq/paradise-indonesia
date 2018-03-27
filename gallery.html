@@ -63,6 +63,13 @@
 				percentPosition: true
 			});
 		});
+
+		$('.gallery .grid .grid-item').hover((e) => {
+			$(e.target).css('z-index','5');
+		});
+		$('.gallery .grid .grid-item').mouseleave((e) => {
+			$(e.target).css('z-index','0');
+		});
 	</script>
 </body>
 </html>

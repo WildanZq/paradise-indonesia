@@ -1,3 +1,6 @@
+#nav-button, #nav-button:after, #nav-button:before {
+	border-color: white;
+}
 .gallery {
 	position: relative;
 	width: 100%;
@@ -30,6 +33,10 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	transition: .3s;
+}
+.gallery .grid .grid-item:hover {
+	transform: scale(1.03);
 }
 .gallery .grid .grid-item:before {
 	content: "";
