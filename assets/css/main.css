@@ -41,6 +41,36 @@ span {
   	padding: 12px 22px;
 }
 
+.search {
+	border: none;
+	background: none;
+	color: white;
+	padding: 6px 0;
+	padding-right: 28px;
+	border-bottom: 2px solid white;
+}
+.search::placeholder {
+	color: #f2f2f2;
+}
+
+.navbar .search {
+	position: absolute;
+	top: 16px;
+	right: 25px;
+}
+.navbar .btn-search {
+	position: absolute;
+	top: 20px;
+	right: 26px;
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
+.navbar .btn-search img {
+	width: 20px;
+	height: auto;
+}
+
 #nav {
 	position: fixed;
 	z-index: 90;
@@ -102,6 +132,7 @@ span {
 }
 #nav .nav-wrapper .navbar, #nav .nav-wrapper .map {
 	height: 100vh;
+	position: relative;
 }
 #nav .nav-wrapper .navbar {
 	width: 34vw;
