@@ -1,0 +1,27 @@
+.gallery {
+	position: relative;
+	width: 100%;
+}
+.gallery:before {
+	content: "";
+	position: absolute;
+	top: 0; left: 0;
+	z-index: -1;
+	height: 288px;
+	width: 100%;
+	background-color: #6484c6;
+}
+.gallery > h1 {
+	color: white;
+	padding-top: 94px;
+	margin-bottom: 70px !important;
+}
+.gallery > h1, .gallery .grid {
+	width: 80%;
+	margin: auto;
+}
+.gallery .grid {
+	width: 25%;
+	height: 276px;
+	background-color: #545454;
+}
